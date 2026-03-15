@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  podzone-mpc:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-03-15T21:25:28.341985Z"
+    description: Podzone MCP context server — Qdrant-backed semantic search for agent
+      context management
+    digest: 7e0eadec599834d0a33cf325313114528654582e2fd2d861481cff2027df9ad4
+    name: podzone-mpc
+    type: application
+    urls:
+    - https://motttt.github.io/podzone-mpc/podzone-mpc-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-03-15T21:25:28.341686Z"
