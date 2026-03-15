@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/motttt/podzone-mpc
+  pullPolicy: IfNotPresent
+  tag: "v0.1.0"
+
+imagePullSecrets: []
+
+service:
+  type: ClusterIP
+  port: 8080
+
+env:
+  qdrantUrl: "http://qdrant.qdrant.svc.cluster.local:6333"
+  ollamaUrl: "http://ollama.ollama.svc.cluster.local:11434"
+  ollamaEmbedModel: "nomic-embed-text"
+  qdrantCollection: "gitopsgui"
+  mcpTransport: "sse"
+  mcpPort: "8080"
+  # Set to a non-empty string to require Bearer token auth on SSE endpoint
+  mcpAuthToken: ""
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
